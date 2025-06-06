@@ -18,6 +18,44 @@
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
+    /* Styl sekcji przed i po czyszczeniu */
+#przed-po {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.image-compare {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image-compare img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-compare .img-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.image-compare:hover .img-before {
+  opacity: 0;
+}
+
+#przed-po h3 {
+  font-weight: 700;
+  color: #facc15;
+}
+
+#przed-po p {
+  color: #e5e7eb;
+}
   </style>
 </head>
 <body class="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen">
@@ -75,6 +113,25 @@
       <img src="https://placehold.co/300x200" class="rounded-xl hover:scale-105 transition duration-300" alt="Auto 4">
     </div>
   </section>
+
+  <section id="przed-po" class="py-20 bg-gray-900 text-white px-4">
+  <h3 class="text-4xl font-bold text-center mb-12">Przed i Po Czyszczeniu</h3>
+  <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+    <!-- Box 1 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-xl">
+      <img src="img/przed.jpg" alt="Przed czyszczeniem" class="w-full h-full object-cover group-hover:opacity-0 transition duration-500">
+      <img src="img/po.jpg" alt="Po czyszczeniu" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-500">
+      <div class="absolute bottom-0 left-0 bg-black bg-opacity-60 px-4 py-2 text-sm">Najedź, aby zobaczyć efekt</div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="relative group overflow-hidden rounded-xl shadow-xl">
+      <img src="img/przed2.jpg" alt="Przed czyszczeniem" class="w-full h-full object-cover group-hover:opacity-0 transition duration-500">
+      <img src="img/po2.jpg" alt="Po czyszczeniu" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-500">
+      <div class="absolute bottom-0 left-0 bg-black bg-opacity-60 px-4 py-2 text-sm">Najedź, aby zobaczyć efekt</div>
+    </div>
+  </div>
+</section>
 
   <section class="py-20 px-4 bg-gray-950">
     <h3 class="text-4xl font-bold text-center mb-10">Zadowolenie klientów</h3>
